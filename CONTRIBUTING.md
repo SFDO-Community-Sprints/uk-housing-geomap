@@ -1,6 +1,6 @@
-# Contributing to AHA UK Housing GeoMap
+# Contributing to GeoMap
 
-Thank you for contributing to the Affordable Housing Accelerator! Here's how to get started.
+Thank you for contributing. Here's how to get started.
 
 ## Prerequisites
 
