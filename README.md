@@ -8,7 +8,7 @@ AHA GeoMap
 
 ## Vision & Goals
 
-A reusable Salesforce Lightning Web Component (LWC) for Housing Associations to display location data on any Salesforce record page. Designed to work with the variety of geolocation data patterns found in housing management systems — compound geolocation fields, separate lat/lon fields, or standard text address fields.
+A reusable Salesforce Lightning Web Component (LWC) for Housing Associations to display location data on any Salesforce record page. Designed to work with the variety of geolocation data patterns such as  — compound geolocation fields, separate lat/lon fields, or standard text address fields.
 
 - Display a map marker on any record page with zero Apex code
 - Support multiple coordinate data sources: compound geolocation fields, separate lat/lon fields, and text address fields (geocoded by Google Maps)
