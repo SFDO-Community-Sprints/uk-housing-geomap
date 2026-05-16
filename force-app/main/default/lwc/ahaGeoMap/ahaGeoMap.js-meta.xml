@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>AHA Dynamic Geo Map</masterLabel>
+    <description
+  >Displays a map using Geolocation, Lat/Lon, or Text Address fields. Part of the Affordable Housing Accelerator (AHA).</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property
+        name="cardTitle"
+        type="String"
+        label="Card Title"
+        default="Location Map"
+        description="Text displayed in the header of the map card."
+      />
+            <property
+        name="cardIcon"
+        type="String"
+        label="Card Icon"
+        default="standard:map_line_item"
+        description="SLDS icon shown in the card header, e.g. utility:location or standard:address. To browse available icons visit lightningdesignsystem.com > Foundations > Icon Library."
+      />
+            <property
+        name="zoomLevel"
+        type="Integer"
+        label="Zoom Level (1-20)"
+        default="14"
+        description="Controls how far in the map is zoomed. 1 = world view, 14 = street level, 20 = building level."
+      />
+
+            <property
+        name="sourceMode"
+        type="String"
+        label="Location Data Source"
+        datasource="address,separate,compound"
+        default="address"
+        description="How the component finds location data. 'address' uses text address fields — Google Maps geocodes them client-side, no Salesforce setup needed (recommended). 'separate' uses numeric Latitude/Longitude fields — requires Salesforce geocoding enabled in Setup > Data > Geocodes. 'compound' uses a custom admin-created Geolocation field."
+      />
+
+            <property
+        name="streetField"
+        type="String"
+        label="Street Field API Name"
+        default="MailingStreet"
+        description="API name of the field containing the street address, e.g. MailingStreet, BillingStreet, or a custom field like Property_Street__c."
+      />
+            <property
+        name="cityField"
+        type="String"
+        label="City Field API Name"
+        default="MailingCity"
+        description="API name of the field containing the city or town, e.g. MailingCity or Property_City__c."
+      />
+            <property
+        name="stateField"
+        type="String"
+        label="County / State Field API Name"
+        default="MailingState"
+        description="API name of the field containing the county or state, e.g. MailingState or Property_County__c."
+      />
+            <property
+        name="postalCodeField"
+        type="String"
+        label="Postcode Field API Name"
+        default="MailingPostalCode"
+        description="API name of the field containing the postcode or zip code, e.g. MailingPostalCode or Property_Postcode__c."
+      />
+            <property
+        name="countryField"
+        type="String"
+        label="Country Field API Name"
+        default="MailingCountry"
+        description="API name of the field containing the country, e.g. MailingCountry or Property_Country__c."
+      />
+
+            <property
+        name="latFieldName"
+        type="String"
+        label="Latitude Field API Name"
+        default="BillingLatitude"
+        description="(Source: separate) API name of the numeric Latitude field. Some standard objects populate this automatically, e.g. BillingLatitude on Account or MailingLatitude on Contact."
+      />
+            <property
+        name="lonFieldName"
+        type="String"
+        label="Longitude Field API Name"
+        default="BillingLongitude"
+        description="(Source: separate) API name of the numeric Longitude field, e.g. BillingLongitude or MailingLongitude."
+      />
+
+            <property
+        name="compoundFieldName"
+        type="String"
+        label="Geolocation Field API Name"
+        default="Location__c"
+        description="(Source: compound) API name of a custom Geolocation field, e.g. Location__c or Site_Location__c. This is a special Salesforce field type that stores latitude and longitude together."
+      />
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

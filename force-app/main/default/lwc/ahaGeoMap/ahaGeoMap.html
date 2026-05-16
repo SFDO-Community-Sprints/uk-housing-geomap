@@ -1,0 +1,37 @@
+<template>
+  <lightning-card title={cardTitle} icon-name={cardIcon}>
+    <div class="slds-m-around_medium">
+      <template lwc:if={isMapReady}>
+        <lightning-map
+          map-markers={mapMarkers}
+          zoom-level={zoomLevel}
+          list-view="hidden"
+        >
+        </lightning-map>
+      </template>
+
+      <template lwc:if={isLoading}>
+        <div class="slds-p-around_medium slds-text-align_center">
+          <lightning-spinner
+            alternative-text="Loading"
+            size="small"
+          ></lightning-spinner>
+        </div>
+      </template>
+
+      <template lwc:if={showNoDataMessage}>
+        <div
+          class="slds-text-color_weak slds-text-align_center slds-p-vertical_medium"
+        >
+          No location data found on this record.
+        </div>
+      </template>
+
+      <template lwc:if={error}>
+        <div class="slds-text-color_error slds-p-around_medium">
+          Error: {errorMessage}
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>
