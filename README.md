@@ -118,4 +118,5 @@ BELOW CONTENT TO USE TO CREATE YOUR FIRST WIKI PAGE TO HOUSE DETAILS ABOUT YOUR 
 
 ## Future Contributions
 
-- none planned
+- Perhaps fetch the co-ordinates from a related record?
+- any ideas share them with us :)
