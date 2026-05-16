@@ -16,7 +16,8 @@ A reusable Salesforce Lightning Web Component (LWC) for Housing Associations to 
 
 ## Project Vertical
 
-Other — Housing / Nonprofit / Public Sector
+All verticals
+(Originally created for Housing / Nonprofit / Public Sector)
 
 ## Trailblazer Group or Slack Channel Link (access required)
 
