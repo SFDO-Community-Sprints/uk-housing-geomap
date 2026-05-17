@@ -95,7 +95,5 @@ After deployment, open **Lightning App Builder** on any record page, find **AHA 
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidance
 
 ## Project Resources and Documentation
-You're reading it.
----
 
-
+You are reading it
