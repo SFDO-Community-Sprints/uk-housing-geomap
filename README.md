@@ -1,8 +1,5 @@
 # AHA GeoMap
-
-# Project Name
-
-AHA GeoMap<img width="509" height="338" alt="GeoMap Pic" src="https://github.com/user-attachments/assets/ed57c806-7c01-405a-99f9-8f07740a33e6" />
+<img width="538" height="355" alt="image" src="https://github.com/user-attachments/assets/2e30e882-580d-4ccb-9243-a49fcb2e75b5" />
 
 
 # Project Overview
@@ -63,7 +60,12 @@ sf org open --target-org aha-geomap-scratch
 
 After deployment, open **Lightning App Builder** on any record page, find **AHA Dynamic Geo Map** in the component list, and drag it onto the page.
 
+<img width="266" height="380" alt="image" src="https://github.com/user-attachments/assets/97ec8a64-9e6a-407e-8ce8-6a8252079896" />
+
+
 ### Configuration Properties
+
+<img width="287" height="847" alt="image" src="https://github.com/user-attachments/assets/566c240e-00b0-4312-8917-d7aae8a872a9" />
 
 | Property                          | Description                                                                                                                                                                   | Default                  |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
@@ -93,32 +95,7 @@ After deployment, open **Lightning App Builder** on any record page, find **AHA 
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidance
 
 ## Project Resources and Documentation
-
-This is it.
-
+You're reading it.
 ---
 
-BELOW CONTENT TO USE TO CREATE YOUR FIRST WIKI PAGE TO HOUSE DETAILS ABOUT YOUR SPRINT PARTICIPATION.
 
-1. Cut the below from the readme and paste into a new Wiki page. Delete these instructions.
-2. Update that wiki page with details from the Sprint.
-3. Copy that format for the next Sprint.
-
-# Sprint (2026):
-
-## Project Team & Accomplishments
-
-- Initial LWC component built and published to the SFDO Community Sprints organisation
-- Supports compound geolocation, separate lat/lon, and text address data sources
-- Fully configurable via Lightning App Builder with no Apex required
-
-## Contributors
-
-| Full Name        | Team Role    | Github Username                                 | Working Group? |
-| ---------------- | ------------ | ----------------------------------------------- | -------------- |
-| Etienne de Klerk | Group Leader | [Etienne-SFDO](https://github.com/Etienne-SFDO) |
-
-## Future Contributions
-
-- Perhaps fetch the co-ordinates from a related record?
-- any ideas share them with us :)
