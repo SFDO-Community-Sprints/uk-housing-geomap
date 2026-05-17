@@ -97,3 +97,19 @@ After deployment, open **Lightning App Builder** on any record page, find **AHA 
 ## Project Resources and Documentation
 
 You are reading it
+
+## Mapping Options in Salesforce Explained
+
+When working with maps in the Salesforce ecosystem, the terminology can get confusing quickly. To clarify how this project fits into the bigger picture, here is a breakdown of the different mapping tools available:
+
+* **LWC `<lightning-map>` (This Component)**
+  This is the modern, standard Lightning Web Component provided out-of-the-box by Salesforce, and it is what this project uses. It is a fully functional JavaScript component powered by Google Maps. It handles all the heavy lifting—like rendering tiles, plotting pins, and managing user zoom—with very little code. It is the best practice for building new, custom mapping features on record pages.
+
+* **Aura `<lightning:map>`**
+  This is the exact same functional mapping engine as the LWC version, but it is built for the older, legacy Aura framework. While it still works and is supported, you should avoid using it for new development. Modern Salesforce development (like this repository) relies exclusively on LWC.
+
+* **SLDS Map Blueprints**
+  The Salesforce Lightning Design System (SLDS) map is **not** a functional map; it is strictly a CSS and HTML blueprint. It provides the visual styling (the borders, the layout, the buttons) to make things look like native Salesforce. You only use SLDS blueprints if you are importing an existing map or building a highly customized mapping engine from scratch using a third-party JavaScript library (like Leaflet or Mapbox) and want it to match the Salesforce UI. 
+
+* **Salesforce Maps**
+  Unlike the free, standard `<lightning-map>` component used in this repository, **Salesforce Maps** is a premium, paid add-on product (formerly known as MapAnything). It is a massive, complex application designed for territory management, route optimization for field sales, and plotting millions of records simultaneously. If you just need to show a handful of dynamic locations on a record page, this project's LWC approach is what you need.
