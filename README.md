@@ -5,13 +5,14 @@
 AHA GeoMap
 
 # Project Overview
+Salesforcre provides the _lightning-map_ component as part of the platform, but does not ship a ready-made Lightning Web Component (LWC) that puts it on a record page. 
+Additionally, none of the components I found provided flexibility to use lat/lon co-ordinate data sources.
 
 ## Vision & Goals
-
-A reusable Salesforce Lightning Web Component (LWC) to display location data on any Salesforce record page. Designed to work with the variety of geolocation data patterns such as  — compound geolocation fields, separate lat/lon fields, or standard text address fields.
+A reusable Salesforce (LWC) to display location data on any Salesforce record page. Designed to work with the variety of geolocation data patterns such as  — compound geolocation field (lat,lon), separate lat/lon fields, or standard text address fields (default).
 
 - Display a map marker on any record page with zero Apex code
-- Support multiple coordinate data sources: compound geolocation fields, separate lat/lon fields, and text address fields (geocoded by Google Maps)
+- Support multiple coordinate data sources: compound geolocation field, separate lat/lon fields, and text address fields (geocoded by Google Maps)
 - Configurable entirely through Lightning App Builder — no code changes required
 
 ## Project Vertical
