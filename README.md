@@ -2,7 +2,8 @@
 
 # Project Name
 
-AHA GeoMap
+AHA GeoMap<img width="509" height="338" alt="GeoMap Pic" src="https://github.com/user-attachments/assets/ed57c806-7c01-405a-99f9-8f07740a33e6" />
+
 
 # Project Overview
 Salesforcre provides the _lightning-map_ component as part of the platform, but does not ship a ready-made Lightning Web Component (LWC) that puts it on a record page. 
