@@ -100,6 +100,14 @@
         description="(Source: compound) API name of a custom Geolocation field, e.g. Location__c or Site_Location__c. This is a special Salesforce field type that stores latitude and longitude together."
       />
 
+            <property
+        name="titleField"
+        type="String"
+        label="Marker Title Field API Name"
+        default="Name"
+        description="API name of the field shown as the map marker title. Use e.g. IncidentNumber or Subject on objects without a Name field (Incident, Case)."
+      />
+
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

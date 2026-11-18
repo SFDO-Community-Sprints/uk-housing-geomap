@@ -21,6 +21,7 @@ export default class AhaGeoMap extends LightningElement {
   @api stateField;
   @api postalCodeField;
   @api countryField;
+  @api titleField; // optional; defaults to Name. Use e.g. IncidentNumber or Subject on objects without a Name field
 
   @track mapMarkers = [];
   error;
@@ -32,14 +33,12 @@ export default class AhaGeoMap extends LightningElement {
     if (this.sourceMode === "compound") {
       return [
         `${this.objectApiName}.${this.compoundFieldName.replace("__c", "")}__Latitude__s`,
-        `${this.objectApiName}.${this.compoundFieldName.replace("__c", "")}__Longitude__s`,
-        `${this.objectApiName}.Name`
+        `${this.objectApiName}.${this.compoundFieldName.replace("__c", "")}__Longitude__s`
       ];
     } else if (this.sourceMode === "separate") {
       return [
         `${this.objectApiName}.${this.latFieldName}`,
-        `${this.objectApiName}.${this.lonFieldName}`,
-        `${this.objectApiName}.Name`
+        `${this.objectApiName}.${this.lonFieldName}`
       ];
     } else if (this.sourceMode === "address") {
       return [
@@ -47,14 +46,27 @@ export default class AhaGeoMap extends LightningElement {
         `${this.objectApiName}.${this.cityField}`,
         `${this.objectApiName}.${this.stateField}`,
         `${this.objectApiName}.${this.postalCodeField}`,
-        `${this.objectApiName}.${this.countryField}`,
-        `${this.objectApiName}.Name`
+        `${this.objectApiName}.${this.countryField}`
       ];
     }
     return [];
   }
 
-  @wire(getRecord, { recordId: "$recordId", fields: "$fieldsToQuery" })
+  get titleFieldName() {
+    return this.titleField || "Name";
+  }
+
+  // Title is optional so objects without a Name field (e.g. Incident, Case) don't fail the wire
+  get optionalFieldsToQuery() {
+    if (!this.objectApiName) return [];
+    return [`${this.objectApiName}.${this.titleFieldName}`];
+  }
+
+  @wire(getRecord, {
+    recordId: "$recordId",
+    fields: "$fieldsToQuery",
+    optionalFields: "$optionalFieldsToQuery"
+  })
   wiredRecord({ error, data }) {
     this.isLoading = false;
     if (data) {
@@ -68,7 +80,7 @@ export default class AhaGeoMap extends LightningElement {
 
   processData(data) {
     let locationData = {};
-    const name = data.fields.Name?.value || "Record Location";
+    const name = data.fields[this.titleFieldName]?.value || "Record Location";
 
     if (this.sourceMode === "compound") {
       const baseName = this.compoundFieldName.replace("__c", "");
